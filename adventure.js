@@ -234,11 +234,7 @@ const teksten = [
   },
 ]
 
-function image(){
-  if(teksten== 1){
-    image.src="Images/bos.jpg"
-  }
-}
-
 startGame()
-image()
+
+
+
