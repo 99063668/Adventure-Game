@@ -1,27 +1,29 @@
-const textElement = document.getElementById('description')
-const optionButtonsElement = document.getElementById('game-buttons')
+const description = document.getElementById('description')
+const buttons = document.getElementById('game-buttons')
+var image = document.getElementById("inventoryItem");
 
 let state = {}
 
 function startGame() {
   state = {}
-  showTextNode(1)
+  showtekst(1)
 }
 
-function showTextNode(textNodeIndex) {
-  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-  textElement.innerText = textNode.text
-  while (optionButtonsElement.firstChild) {
-    optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+function showtekst(tekstIndex) {
+  const tekst = teksten.find(tekst => tekst.id === tekstIndex)
+  description.innerText = tekst.text
+  image.src="Images/bos.jpg"
+  while (buttons.firstChild) {
+    buttons.removeChild(buttons.firstChild)
   }
 
-  textNode.options.forEach(option => {
+  tekst.options.forEach(option => {
     if (showOption(option)) {
       const button = document.createElement('button')
       button.innerText = option.text
       button.classList.add('btn')
       button.addEventListener('click', () => selectOption(option))
-      optionButtonsElement.appendChild(button)
+      buttons.appendChild(button)
     }
   })
 }
@@ -31,17 +33,27 @@ function showOption(option) {
 }
 
 function selectOption(option) {
-  const nextTextNodeId = option.nextText
-  if (nextTextNodeId <= 0) {
+  const nexttekstId = option.nextText
+  if (nexttekstId <= 0) {
     return startGame()
   }
   state = Object.assign(state, option.setState)
-  showTextNode(nextTextNodeId)
+  showtekst(nexttekstId)
 }
 
-const textNodes = [
+const teksten = [
   {
-    id: 1,
+      id: 1,
+      text: 'In deze game kom je verder door de juiste keuze te maken.',
+      options: [
+        {
+          text: 'Start',
+          nextText: 14
+        }
+      ]
+    },
+    {
+    id: 14,
     text: 'Het is nacht en je bent verdwaald in een bos en staat op een splitsing welke kant kies je?',
     options: [
       {
@@ -67,7 +79,7 @@ const textNodes = [
       },
       {
         text: 'Loop voorbij het huis',
-        nextText: 6
+        nextText: 10
       },
      
     ]
@@ -101,12 +113,16 @@ const textNodes = [
         {
         text: 'Probeer langs de beer te sluipen',
         nextText: 6
-      }
+      },
+      {
+        text: 'Loop terug de grot uit.',
+        nextText: 15
+        },
     ]
   },
     {
   id: 7,
-  text: 'In de grot kom je een beer tegen wat doe je?',
+  text: 'In de grot kom je oog in oog te staan met een beer dit overleef je niet.',
   options: [
     {
       requiredState: (currentState) => currentState.zwaard,
@@ -115,6 +131,16 @@ const textNodes = [
       },
       {
       text: 'Restart',
+      nextText: -1
+    }
+  ]
+},
+{
+  id: 15,
+  text: 'Terwijl je naar de uitgang loopt struikel je over een steentje vervolgens wordt je vermoord door de beer.',
+  options: [
+    {
+      text: 'Game Over!',
       nextText: -1
     }
   ]
@@ -161,83 +187,58 @@ const textNodes = [
       }
     ]
   },
-
-
-
-
-
-
-
-
-
-  {
-    id: 7,
-    text: 'While exploring the castle you come across a horrible monster in your path.',
-    options: [
-      {
-        text: 'Try to run',
-        nextText: 8
-      },
-      {
-        text: 'Attack it with your sword',
-        requiredState: (currentState) => currentState.sword,
-        nextText: 9
-      },
-      {
-        text: 'Hide behind your shield',
-        requiredState: (currentState) => currentState.shield,
-        nextText: 10
-      },
-      {
-        text: 'Throw the blue goo at it',
-        requiredState: (currentState) => currentState.blueGoo,
-        nextText: 11
-      }
-    ]
-  },
-  {
-    id: 8,
-    text: 'Your attempts to run are in vain and the monster easily catches.',
-    options: [
-      {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 9,
-    text: 'You foolishly thought this monster could be slain with a single sword.',
-    options: [
-      {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
-  },
   {
     id: 10,
-    text: 'The monster laughed as you hid behind your shield and ate you.',
+    text: 'Na een paar minuten wandelen zie je een sleutel op de grond liggen.',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
-      }
+        text: 'Pak de sleutel en ga terug naar het huisje.',
+        setState: { sleutel: true },
+        nextText: 11
+      },
+    {
+        text: 'Ga verder.',
+        nextText: 13
+    }
     ]
   },
   {
     id: 11,
-    text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+    text: 'Na een paar minuten wandelen ben je weer bij het huisje aangekomen.',
     options: [
       {
-        text: 'Congratulations. Play Again.',
+        text: 'Ga naar binnen.',
+        equiredState: (currentState) => currentState.sleutel,
+        setState: { sleutel: true },
+        nextText: 12
+    }
+    ]
+  },
+  { id: 12,
+    text: 'In het huisje staat wat te eten en te drinken klaar, Je hebt de nacht overleefd!',
+    options: [
+      {
+        text: 'You Win!',
         nextText: -1
       }
     ]
-  }
+  },
+  { id: 13,
+    text: 'Je bent uitgehongerd geraakt.',
+    options: [
+      {
+        text: 'Game Over!',
+        nextText: -1
+      }
+    ]
+  },
 ]
 
+function image(){
+  if(teksten== 1){
+    image.src="Images/bos.jpg"
+  }
+}
+
 startGame()
-
-
-
+image()
