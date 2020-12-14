@@ -74,7 +74,43 @@ function huis2(){
 
   button1.innerHTML = "Ga terug.";
   button1.style.display = "inline";
-  button1.onclick = voorbijHuis;
+  button1.onclick = terug;
+
+  button2.style.display = "none";
+
+  button3.style.display = "none";
+
+  inventoryitem.style.display = "none";
+}
+
+//Scherm terug
+function terug(){
+  gamecontainer.className = "terug";
+  title.innerHTML = "Escape the forest.";
+  description.innerHTML = "Na een paar minuten wandelen zie je een sleutel op de grond liggen.";
+
+  button1.innerHTML = "Pak de sleutel en ga terug naar het huisje.";
+  button1.style.display = "inline";
+  button1.onclick = huisje;
+
+  button2.innerHTML = "Ga verder.";
+  button2.style.display = "inline";
+  button2.onclick = uitgehongerd;
+
+  button3.style.display = "none";
+
+  inventoryitem.style.display = "none";
+}
+
+//Scherm huisje
+function huisje(){
+  gamecontainer.className = "huisje";
+  title.innerHTML = "Escape the forest.";
+  description.innerHTML = "'Na een paar minuten wandelen ben je weer bij het huisje aangekomen.";
+
+  button1.innerHTML = "Ga naar binnen.";
+  button1.style.display = "inline";
+  button1.onclick = succeed3;
 
   button2.style.display = "none";
 
@@ -223,12 +259,41 @@ function oververmoeid(){
   button3.style.display = "none";
 }
 
-
 //Scherm succeed2
 function succeed2(){
   gamecontainer.className = "succeed2";
   title.innerHTML = "Escape the forest.";
   description.innerHTML = "Na het uitrusten kom je aan bij een dorpje. Het is je gelukt om uit het bos te komen!";
+
+  button1.innerHTML = "Play again!";
+  button1.style.display = "inline";
+  button1.onclick = Start;
+
+  button2.style.display = "none";
+
+  button3.style.display = "none";
+}
+
+//Scherm uitgehongerd
+function uitgehongerd(){
+  gamecontainer.className = "uitgehongerd";
+  title.innerHTML = "Escape the forest.";
+  description.innerHTML = "Je bent uitgehongerd geraakt!";
+
+  button1.innerHTML = "Play again!";
+  button1.style.display = "inline";
+  button1.onclick = Start;
+
+  button2.style.display = "none";
+
+  button3.style.display = "none";
+}
+
+//Scherm succed3
+function succeed3(){
+  gamecontainer.className = "succeed3";
+  title.innerHTML = "Escape the forest.";
+  description.innerHTML = "In het huisje staat wat te eten en te drinken klaar, Je hebt de nacht overleefd!";
 
   button1.innerHTML = "Play again!";
   button1.style.display = "inline";

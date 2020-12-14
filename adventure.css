@@ -17,7 +17,7 @@ body {
 #button1, #button2, #button3{
   top: 260px;
   color: black;
-  padding: 3px 24px;
+  padding: 5px 24px;
   background-color: rgb(117, 9, 9);
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -38,6 +38,10 @@ body {
 
 
 /******Start scherm******/
+.Start{
+  background-image: url("Images/bos.jpg");
+}
+
 .Start>#description{
   position: absolute;
   top: 230px;
@@ -180,6 +184,16 @@ body {
   top: 150px;
 }
 
+/******Succeed3 scherm******/
+.succeed3>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.succeed3>#title{
+  position: absolute;
+  top: 150px;
+}
 
 /******Oververmoeid scherm******/
 .oververmoeid>#description{
@@ -188,6 +202,28 @@ body {
 }
 
 .oververmoeid>#title{
+  position: absolute;
+  top: 150px;
+}
+
+/******Uitgehongerd scherm******/
+.uitgehongerd>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.uitgehongerd>#title{
+  position: absolute;
+  top: 150px;
+}
+
+/******Huisje scherm******/
+.huisje>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.huisje>#title{
   position: absolute;
   top: 150px;
 }
