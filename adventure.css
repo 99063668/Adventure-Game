@@ -1,13 +1,20 @@
-#inventoryItem{
+body {
   position: relative;
-  bottom: 50px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+  bottom: 100px;
+  right: 100px;
+  background-color: rgb(48, 46, 46);
 }
-#description{
-  position: relative;
-  top: 250px;
-}
-.btn{
-  position: relative;
+
+
+
+/******Button styling*****/
+#button1, #button2, #button3{
   top: 260px;
   color: black;
   padding: 3px 24px;
@@ -15,23 +22,172 @@
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.btn:hover{
+#button1:hover{
+  background-color: black;
+  color: rgb(117, 9, 9);
+}
+#button2:hover{
+  background-color: black;
+  color: rgb(117, 9, 9);
+}
+#button3:hover{
   background-color: black;
   color: rgb(117, 9, 9);
 }
 
 
-  body {
-    padding: 0;
-    position: relative;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 100vh;
-    bottom: 100px;
-    background-color: rgb(48, 46, 46);
-  }
-  
- 
+
+/******Start scherm******/
+.Start>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.Start>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Begin scherm******/
+.begin>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.begin>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Huis scherm******/
+.huis>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.huis>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Huis2 scherm******/
+.huis2>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.huis2>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Voorbij huis scherm******/
+.voorbijHuis>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.voorbijHuis>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Grot scherm******/
+.grot>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.grot>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Grot2 scherm******/
+.grot2>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.grot2>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Struikel scherm******/
+.struikel>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.struikel>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Vermoord scherm******/
+.vermoord>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.vermoord>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Vermoord2 scherm******/
+.vermoord2>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.vermoord2>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Succeed scherm******/
+.succeed>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.succeed>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Succeed2 scherm******/
+.succeed2>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.succeed2>#title{
+  position: absolute;
+  top: 150px;
+}
+
+
+/******Oververmoeid scherm******/
+.oververmoeid>#description{
+  position: absolute;
+  top: 230px;
+}
+
+.oververmoeid>#title{
+  position: absolute;
+  top: 150px;
+}
