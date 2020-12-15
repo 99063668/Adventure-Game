@@ -12,37 +12,41 @@ body {
   top: 80px;
 }
 #title{
+  -webkit-text-stroke: 0.5px black;
   position: relative;
   margin: 0 auto;
 }
 #description{
+  -webkit-text-stroke: 0.2px black;
   width: 960px;
   color: white;
   margin: 0 auto;
+  font-size: 18px;
 }
 
 
 /******Button styling*****/
 #button1, #button2, #button3{
   top: 500px;
-  color: black;
-  padding: 5px 24px;
-  background-color: rgb(117, 9, 9);
+  color: white;
+  padding: 15px 30px;
+  background-color: rgb(20, 111, 163);
+  font-size: 14px;
   border-radius: 8px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(247, 244, 244, 0.2), 0 6px 20px 0 rgba(252, 248, 248, 0.19);
   position: relative;
 }
 #button1:hover{
-  background-color: black;
-  color: rgb(117, 9, 9);
+  background-color: rgb(9, 50, 73);
+  color: white;
 }
 #button2:hover{
-  background-color: black;
-  color: rgb(117, 9, 9);
+   background-color: rgb(9, 50, 73);
+  color: white;
 }
 #button3:hover{
-  background-color: black;
-  color: rgb(117, 9, 9);
+   background-color: rgb(9, 50, 73);
+  color: white;
 }
 
 
