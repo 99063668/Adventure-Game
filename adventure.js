@@ -199,7 +199,7 @@ function struikel(){
 //Scherm vermoord
 function vermoord(){
   gamecontainer.className = "vermoord";
-  title.innerHTML = "You Lose!.";
+  title.innerHTML = "You Lose!";
   description.innerHTML = "Je bent vermoord door de beer!";
     
   button1.innerHTML = "Play again!";

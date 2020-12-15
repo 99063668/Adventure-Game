@@ -1,6 +1,7 @@
 /******Common styling*****/
 body {
-  background-color: rgb(48, 46, 46);
+  background: url("images/body.png") no-repeat center center fixed; 
+  background-size: cover;
 }
 #game-container{
   margin: 0 auto;
