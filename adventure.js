@@ -7,6 +7,7 @@ var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var inventoryitem = document.getElementById("inventoryItem");
+var items = {Sleutel:0, Zwaard:0};
 
 //Laat de code starten
 Start();
@@ -31,7 +32,7 @@ function Start(){
 //Scherm begin
 function begin(){
   gamecontainer.className = "begin";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "De splitsing.";
   description.innerHTML = "Het is nacht en je bent verdwaald in een bos en staat op een splitsing welke kant kies je?";
 
   button1.innerHTML = "Ga naar links.";
@@ -50,7 +51,7 @@ function begin(){
 //Scherm huis
 function huis(){
   gamecontainer.className = "huis";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "Het huis.";
   description.innerHTML = "Je komt aan bij een huis je ziet licht branden in het huis wat doe je?";
 
   button1.innerHTML = "Ga naar binnen.";
@@ -68,8 +69,8 @@ function huis(){
 
 //Scherm huis2
 function huis2(){
-  gamecontainer.className = "huis2";
-  title.innerHTML = "Escape the forest.";
+  gamecontainer.className = "Het huis";
+  title.innerHTML = "De sleutel.";
   description.innerHTML = "Je hebt geen sleutel dus je kunt het huis niet betreden.";
 
   button1.innerHTML = "Ga terug.";
@@ -86,7 +87,7 @@ function huis2(){
 //Scherm terug
 function terug(){
   gamecontainer.className = "terug";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "De sleutel.";
   description.innerHTML = "Na een paar minuten wandelen zie je een sleutel op de grond liggen.";
 
   button1.innerHTML = "Pak de sleutel en ga terug naar het huisje.";
@@ -105,8 +106,8 @@ function terug(){
 //Scherm huisje
 function huisje(){
   gamecontainer.className = "huisje";
-  title.innerHTML = "Escape the forest.";
-  description.innerHTML = "'Na een paar minuten wandelen ben je weer bij het huisje aangekomen.";
+  title.innerHTML = "Het huis.";
+  description.innerHTML = "Na een paar minuten wandelen ben je weer bij het huisje aangekomen.";
 
   button1.innerHTML = "Ga naar binnen.";
   button1.style.display = "inline";
@@ -122,7 +123,7 @@ function huisje(){
 //Scherm voorbij huis
 function voorbijHuis(){
   gamecontainer.className = "voorbijHuis";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "De grot.";
   description.innerHTML = "Je loopt richting een grot vlak naast de grot zie je een zwaard wat doe je?";
 
   button1.innerHTML = "Pak het zwaard.";
@@ -141,7 +142,7 @@ function voorbijHuis(){
 //Scherm grot
 function grot(){
   gamecontainer.className = "grot";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "In de grot.";
   description.innerHTML = "In de grot kom je een beer tegen wat doe je?";
 
   button1.innerHTML = "Probeer langs de beer te sluipen.";
@@ -162,7 +163,7 @@ function grot(){
 //Scherm grot2
 function grot2(){
   gamecontainer.className = "grot2";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "In de grot.";
   description.innerHTML = "In de grot kom je een beer tegen wat doe je?";
 
   button1.innerHTML = "Probeer langs de beer te sluipen.";
@@ -183,7 +184,7 @@ function grot2(){
 //Schrem struikel
 function struikel(){
   gamecontainer.className = "struikel";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "You Lose!";
   description.innerHTML = "Terwijl je naar de uitgang loopt struikel je over een steentje vervolgens wordt je vermoord door de beer!";
 
   button1.innerHTML = "Play again!";
@@ -198,7 +199,7 @@ function struikel(){
 //Scherm vermoord
 function vermoord(){
   gamecontainer.className = "vermoord";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "You Lose!.";
   description.innerHTML = "Je bent vermoord door de beer!";
     
   button1.innerHTML = "Play again!";
@@ -213,7 +214,7 @@ function vermoord(){
 //Scherm vermoord2
 function vermoord2(){
   gamecontainer.className = "vermoord2";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "You Lose!";
   description.innerHTML = "In de grot kom je oog in oog te staan met een beer dit overleef je niet!";
 
   button1.innerHTML = "Play again!";
@@ -228,7 +229,7 @@ function vermoord2(){
 //Scherm succeed
 function succeed(){
   gamecontainer.className = "succeed";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "You Win!";
   description.innerHTML = "Het is je gelukt om door de grot heen te komen! Je ziet een kampvuur wat doe je?";
 
   button1.innerHTML = "Rust uit bij het kampvuur";
@@ -247,7 +248,7 @@ function succeed(){
 //Scherm oververmoeid
 function oververmoeid(){
   gamecontainer.className = "oververmoeid";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "You Lose!";
   description.innerHTML = "Je bent oververmoeid geraakt!";
 
   button1.innerHTML = "Play again!";
@@ -262,7 +263,7 @@ function oververmoeid(){
 //Scherm succeed2
 function succeed2(){
   gamecontainer.className = "succeed2";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "Het kampvuur.";
   description.innerHTML = "Na het uitrusten kom je aan bij een dorpje. Het is je gelukt om uit het bos te komen!";
 
   button1.innerHTML = "Play again!";
@@ -277,7 +278,7 @@ function succeed2(){
 //Scherm uitgehongerd
 function uitgehongerd(){
   gamecontainer.className = "uitgehongerd";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "You Lose!";
   description.innerHTML = "Je bent uitgehongerd geraakt!";
 
   button1.innerHTML = "Play again!";
@@ -292,7 +293,7 @@ function uitgehongerd(){
 //Scherm succed3
 function succeed3(){
   gamecontainer.className = "succeed3";
-  title.innerHTML = "Escape the forest.";
+  title.innerHTML = "You Win!";
   description.innerHTML = "In het huisje staat wat te eten en te drinken klaar, Je hebt de nacht overleefd!";
 
   button1.innerHTML = "Play again!";

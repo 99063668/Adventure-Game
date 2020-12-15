@@ -1,26 +1,35 @@
+/******Common styling*****/
 body {
-  position: relative;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  height: 100vh;
-  bottom: 100px;
-  right: 100px;
   background-color: rgb(48, 46, 46);
 }
-
+#game-container{
+  margin: 0 auto;
+  width: 840px;
+  height: 450px;
+  color: white;
+  position: relative;
+  top: 80px;
+}
+#title{
+  position: relative;
+  margin: 0 auto;
+}
+#description{
+  width: 960px;
+  color: white;
+  margin: 0 auto;
+}
 
 
 /******Button styling*****/
 #button1, #button2, #button3{
-  top: 260px;
+  top: 500px;
   color: black;
   padding: 5px 24px;
   background-color: rgb(117, 9, 9);
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  position: relative;
 }
 #button1:hover{
   background-color: black;
@@ -36,194 +45,286 @@ body {
 }
 
 
-
 /******Start scherm******/
 .Start{
-  background-image: url("Images/bos.jpg");
+  background-image: url("Images/start.png");
 }
 
 .Start>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .Start>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Begin scherm******/
+.begin{
+  background-image: url("Images/bos.v1.jpg");
+}
+
 .begin>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .begin>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Huis scherm******/
+.huis{
+  background-image: url("Images/huis.png");
+}
+
 .huis>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .huis>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Huis2 scherm******/
+.huis2{
+  background-image: url("Images/huis.png");
+}
+
 .huis2>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .huis2>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Voorbij huis scherm******/
+.voorbijHuis{
+  background-image: url("Images/grot.png");
+}
+
 .voorbijHuis>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .voorbijHuis>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Grot scherm******/
+.grot{
+  background-image: url("Images/beer.png");
+}
+
 .grot>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .grot>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Grot2 scherm******/
+.grot2{
+  background-image: url("Images/beer.png");
+}
+
 .grot2>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .grot2>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Struikel scherm******/
+.struikel{
+  background-image: url("Images/struikel.png");
+}
+
 .struikel>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .struikel>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Vermoord scherm******/
+.vermoord{
+  background-image: url("Images/beer2.png");
+}
+
 .vermoord>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .vermoord>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Vermoord2 scherm******/
+.vermoord2{
+  background-image: url("Images/beer2.png");
+}
+
 .vermoord2>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .vermoord2>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
+}
+
+
+/******Terug scherm******/
+.terug{
+  background-image: url("Images/weg.png");
+}
+
+.terug>#description{
+  position: absolute;
+  top: 460px;
+}
+
+.terug>#title{
+  position: absolute;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Succeed scherm******/
+.succeed{
+  background-image: url("Images/vuur.png");
+}
+
 .succeed>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .succeed>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 
 /******Succeed2 scherm******/
+.succeed2{
+  background-image: url("Images/dorp.png");
+}
+
 .succeed2>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .succeed2>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 /******Succeed3 scherm******/
+.succeed3{
+  background-image: url("Images/huis2.png");
+}
 .succeed3>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .succeed3>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 /******Oververmoeid scherm******/
+.oververmoeid{
+  background-image: url("Images/moe.png");
+}
+
 .oververmoeid>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .oververmoeid>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 /******Uitgehongerd scherm******/
+.uitgehongerd{
+  background-image: url("Images/honger.png");
+}
+
 .uitgehongerd>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .uitgehongerd>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
 
 /******Huisje scherm******/
+.huisje{
+  background-image: url("Images/huis.png");
+}
+
+
 .huisje>#description{
   position: absolute;
-  top: 230px;
+  top: 460px;
 }
 
 .huisje>#title{
   position: absolute;
-  top: 150px;
+  bottom: 460px;
+  left: 270px;
 }
