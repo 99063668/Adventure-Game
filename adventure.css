@@ -12,41 +12,46 @@ body {
   top: 80px;
 }
 #title{
-  -webkit-text-stroke: 0.5px black;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   position: relative;
-  margin: 0 auto;
+  margin: 0px 0px 0px 0px;
+  padding:5px; background: rgba(20, 111, 163, 0.5); width: 242px; 
 }
 #description{
-  -webkit-text-stroke: 0.2px black;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   width: 960px;
   color: white;
   margin: 0 auto;
   font-size: 18px;
+  padding:5px; background: rgba(20, 111, 163, 0.5); width: 830px; 
 }
 
 
 /******Button styling*****/
 #button1, #button2, #button3{
-  top: 500px;
+  top: 400px;
   color: white;
-  padding: 15px 30px;
+  padding: 12px 30px;
+  left: 5px;
   background-color: rgb(20, 111, 163);
   font-size: 14px;
   border-radius: 8px;
-  box-shadow: 0 8px 16px 0 rgba(247, 244, 244, 0.2), 0 6px 20px 0 rgba(252, 248, 248, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(39, 39, 39, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
 }
 #button1:hover{
   background-color: rgb(9, 50, 73);
-  color: white;
+  color: rgb(212, 208, 208);
 }
 #button2:hover{
-   background-color: rgb(9, 50, 73);
-  color: white;
+  background-color: rgb(9, 50, 73);
+  color: rgb(212, 208, 208);
 }
 #button3:hover{
-   background-color: rgb(9, 50, 73);
-  color: white;
+  background-color: rgb(9, 50, 73);
+  color: rgb(212, 208, 208);
 }
 
 
@@ -57,12 +62,12 @@ body {
 
 .Start>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .Start>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -74,12 +79,12 @@ body {
 
 .begin>#description{
   position: absolute;
-  top: 460px;
+    top: 330px;
 }
 
 .begin>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -91,12 +96,12 @@ body {
 
 .huis>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .huis>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -108,12 +113,12 @@ body {
 
 .huis2>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .huis2>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -125,12 +130,12 @@ body {
 
 .voorbijHuis>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .voorbijHuis>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -142,12 +147,12 @@ body {
 
 .grot>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .grot>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -159,12 +164,12 @@ body {
 
 .grot2>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .grot2>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -176,12 +181,12 @@ body {
 
 .struikel>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .struikel>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -193,12 +198,12 @@ body {
 
 .vermoord>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .vermoord>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -210,12 +215,12 @@ body {
 
 .vermoord2>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .vermoord2>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -227,12 +232,12 @@ body {
 
 .terug>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .terug>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -244,12 +249,12 @@ body {
 
 .succeed>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .succeed>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -261,12 +266,12 @@ body {
 
 .succeed2>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .succeed2>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -276,12 +281,12 @@ body {
 }
 .succeed3>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .succeed3>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -292,12 +297,12 @@ body {
 
 .oververmoeid>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .oververmoeid>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -308,12 +313,12 @@ body {
 
 .uitgehongerd>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .uitgehongerd>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
 
@@ -325,11 +330,11 @@ body {
 
 .huisje>#description{
   position: absolute;
-  top: 460px;
+  top: 330px;
 }
 
 .huisje>#title{
   position: absolute;
-  bottom: 460px;
+  bottom: 395px;
   left: 270px;
 }
