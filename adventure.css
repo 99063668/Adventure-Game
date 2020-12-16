@@ -33,6 +33,7 @@ body {
 #button1, #button2, #button3{
   top: 400px;
   color: white;
+  text-shadow: 0.5px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   padding: 12px 30px;
   left: 5px;
   background-color: rgb(20, 111, 163);
@@ -261,7 +262,7 @@ body {
 
 /******Succeed2 scherm******/
 .succeed2{
-  background-image: url("Images/dorp.png");
+  background-image: url("Images/start.png");
 }
 
 .succeed2>#description{
@@ -327,13 +328,44 @@ body {
   background-image: url("Images/huis.png");
 }
 
-
 .huisje>#description{
   position: absolute;
   top: 330px;
 }
 
 .huisje>#title{
+  position: absolute;
+  bottom: 395px;
+  left: 270px;
+}
+
+/******Slenderman scherm******/
+.slenderman{
+  background-image: url("Images/start.png");
+}
+
+.slenderman>#description{
+  position: absolute;
+  top: 330px;
+}
+
+.slenderman>#title{
+  position: absolute;
+  bottom: 395px;
+  left: 270px;
+}
+
+/******Slenderman2 scherm******/
+.slenderman2{
+  background-image: url("Images/shotgunicon.png");
+}
+
+.slenderman2>#description{
+  position: absolute;
+  top: 330px;
+}
+
+.slenderman2>#title{
   position: absolute;
   bottom: 395px;
   left: 270px;

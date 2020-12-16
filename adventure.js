@@ -7,8 +7,9 @@ var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var inventoryitem = document.getElementById("inventoryItem");
-var oppakken = {"Sleutel":false, "Zwaard":false};
+var oppakken = {Sleutel:false, Zwaard:false, Shotgun:false, Slenderman:false};
 
+var a = oppakken["Sleutel"];
 //Geluid
 /*var myMusic = new Audio()
 myMusic.src = "sound.mp3"
@@ -105,11 +106,29 @@ function terug(){
   title.innerHTML = "De sleutel.";
   description.innerHTML = "Na een paar minuten wandelen zie je een sleutel op de grond liggen.";
 
-  setButtons("Pak de sleutel en ga terug naar het huisje", huisje, "Ga verder", uitgehongerd);
+  setButtons("Pak de sleutel en ga terug naar het huisje", huisje, "Ga verder zonder sleutel", uitgehongerd);
 
   button3.style.display = "none";
 
-  inventoryitem.style.display = "none";
+  inventoryitem.style.display = "inline";
+  inventoryitem.src= "Images/key.png";
+
+  inventoryitem.onclick = function () {
+    oppakken["Sleutel"] = true;
+    terug();
+  }
+  if (oppakken["Sleutel"] == true){
+    inventoryitem.style.display = "none";
+  } else {
+    inventoryitem.style.display = "block";
+  }
+  if (oppakken["Sleutel"] == true){
+    button1.onclick = huisje;
+    button1.disabled=false;
+  } else {
+    button2.onclick = uitgehongerd;
+    button1.disabled=true;
+  }
 }
 
 //Scherm huisje
@@ -137,7 +156,16 @@ function voorbijHuis(){
 
   inventoryitem.style.display = "inline";
   inventoryitem.src= "Images/zwaard.png";
-  inventoryitem.onclick= grot2, true;
+
+  inventoryitem.onclick = function () {
+    oppakken["Zwaard"] = true;
+    voorbijHuis();
+  }
+  if (oppakken["Zwaard"] == true){
+    inventoryitem.style.display = "none";
+  } else {
+    inventoryitem.style.display = "block";
+  }
 }
 
 //Scherm grot2
@@ -150,11 +178,13 @@ function grot2(){
 
   button2.innerHTML = "Vermoord de beer.";
   button2.style.display = "inline";
-  if(inventoryitem==true){
+
+  if (oppakken["Zwaard"] == true){
     button2.onclick = succeed;
-  }else{
+  } else {
     button2.onclick = vermoord;
   }
+
 
   button3.innerHTML = "Loop terug de grot uit.";
   button3.style.display = "inline";
@@ -210,25 +240,87 @@ function oververmoeid(){
 
   setButtons("Play again!", Start, null);
 
-  button2.style.display = "none";
-
   button3.style.display = "none";
+
+  inventoryitem.style.display= "none";
 }
 
 //Scherm succeed2
 function succeed2(){
   gamecontainer.className = "succeed2";
-  title.innerHTML = "Het kampvuur.";
-  description.innerHTML = "Na het uitrusten kom je aan bij een dorpje. Het is je gelukt om uit het bos te komen!";
+  title.innerHTML = "De vreemde man";
+  description.innerHTML = "Na het uitrusten loop je verder door het bos je ziet een vreemde man wat doe je?.";
+
+  setButtons("Ren weg", oververmoeid, "Verdedig jezelf", slenderman);
+
+  button3.style.display = "none";
+
+  inventoryitem.style.display = "inline";
+  inventoryitem.src= "Images/shotgun.png";
+
+  inventoryitem.onclick = function () {
+    oppakken["Shotgun"] = true;
+    succeed2();
+  }
+  if (oppakken["Shotgun"] == true){
+    inventoryitem.style.display = "none";
+  } else {
+    inventoryitem.style.display = "block";
+  }
+  if (oppakken["Shotgun"] == true){
+    button1.onclick = slenderman;
+    button1.disabled=false;
+  } else {
+    button2.onclick = oververmoeid;
+    button1.disabled=true;
+  }
+}
+
+//Slenderman
+function slenderman(){
+  gamecontainer.className = "slenderman";
+  title.innerHTML = "Slenderman.";
+  description.innerHTML = "Met de shotgun die je net hebt opgepakt kun je Slenderman vermoorden.";
+
+  setButtons("Ga verder", slenderman2, null);
+
+  button3.style.display = "none";
+
+  inventoryitem.style.display = "none";
+  inventoryitem.src= "Images/slender.png";
+
+  inventoryitem.onclick = function () {
+    oppakken["Slenderman"] = true;
+    slenderman();
+  }
+  if (oppakken["Slenderman"] == true){
+    inventoryitem.style.display = "none";
+  } else {
+    inventoryitem.style.display = "block";
+  }
+  if (oppakken["Slenderman"] == true){
+    button1.onclick = slenderman2;
+    button1.disabled=false;
+  } else {
+    button2.onclick = slenderman2;
+    button1.disabled=true;
+  }
+}
+
+//Slenderman2
+function slenderman2(){
+  gamecontainer.className = "slenderman2";
+  title.innerHTML = "You win!.";
+  description.innerHTML = "Je hebt slenderman vermoord en hebt veilig het eind van het bos bereikt.";
 
   setButtons("Play again!", Start, null);
 
-  button2.style.display = "none";
-
   button3.style.display = "none";
+
+  inventoryitem.style.display = "none";
 }
 
-//Scherm uitgehongerd
+  //Scherm uitgehongerd
 function uitgehongerd(){
   gamecontainer.className = "uitgehongerd";
   title.innerHTML = "You Lose!";
@@ -239,6 +331,8 @@ function uitgehongerd(){
   button2.style.display = "none";
 
   button3.style.display = "none";
+
+  inventoryitem.style.display= "none";
 }
 
 //Scherm succed3
