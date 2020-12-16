@@ -7,7 +7,7 @@ var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var inventoryitem = document.getElementById("inventoryItem");
-var oppakken = {Sleutel:false, Zwaard:false, Shotgun:false, Slenderman:false};
+var oppakken = {Sleutel:false, Zwaard:false, Shotgun:false, Slenderman:false, Sirenhead:false};
 
 var a = oppakken["Sleutel"];
 //Geluid
@@ -135,9 +135,9 @@ function terug(){
 function huisje(){
   gamecontainer.className = "huisje";
   title.innerHTML = "Het huis.";
-  description.innerHTML = "Na een paar minuten wandelen ben je weer bij het huisje aangekomen. Het lijkt nogsteeds of er niemand aanwezig is rondom het huis.";
+  description.innerHTML = "Na een paar minuten wandelen ben je weer bij het huisje aangekomen. Het lijkt als of er iemand aanwezig is rondom het huis.";
 
-  setButtons("Ga naar binnen", succeed3, null);
+  setButtons("Ga naar binnen", succeed3, "Probeer Sirenhead te vermoorden", sirenhead);
 
   button3.style.display = "none";
 
@@ -311,7 +311,7 @@ function slenderman(){
 function slenderman2(){
   gamecontainer.className = "slenderman2";
   title.innerHTML = "You win!.";
-  description.innerHTML = "Je hebt slenderman vermoord en hebt veilig het eind van het bos bereikt.";
+  description.innerHTML = "Je hebt Slenderman vermoord en hebt veilig het eind van het bos bereikt.";
 
   setButtons("Play again!", Start, null);
 
@@ -340,6 +340,20 @@ function succeed3(){
   gamecontainer.className = "succeed3";
   title.innerHTML = "You Win!";
   description.innerHTML = "In het huisje staat wat te eten en te drinken klaar, Je hebt de nacht overleefd!";
+
+  setButtons("Play again!", Start, null);
+
+  button2.style.display = "none";
+
+  button3.style.display = "none";
+
+  inventoryitem.style.display = "none";}
+
+//Sirenhead
+function sirenhead(){
+  gamecontainer.className = "sirenhead";
+  title.innerHTML = "You lose!";
+  description.innerHTML = "Je probeerde Sirenhead aantevallen, dit heb je niet overleefd!";
 
   setButtons("Play again!", Start, null);
 

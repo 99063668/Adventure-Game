@@ -92,7 +92,7 @@ body {
 
 /******Huis scherm******/
 .huis{
-  background-image: url("Images/huis.png");
+  background-image: url("Images/huisv2.png");
 }
 
 .huis>#description{
@@ -109,7 +109,7 @@ body {
 
 /******Huis2 scherm******/
 .huis2{
-  background-image: url("Images/huis.png");
+  background-image: url("Images/huisv2.png");
 }
 
 .huis2>#description{
@@ -228,7 +228,7 @@ body {
 
 /******Terug scherm******/
 .terug{
-  background-image: url("Images/weg.png");
+  background-image: url("Images/bos.png");
 }
 
 .terug>#description{
@@ -325,7 +325,7 @@ body {
 
 /******Huisje scherm******/
 .huisje{
-  background-image: url("Images/huis.png");
+  background-image: url("Images/huisv1.png");
 }
 
 .huisje>#description{
@@ -366,6 +366,22 @@ body {
 }
 
 .slenderman2>#title{
+  position: absolute;
+  bottom: 395px;
+  left: 270px;
+}
+
+/******Sirenhead scherm******/
+.sirenhead{
+  background-image: url("Images/dood.png");
+}
+
+.sirenhead>#description{
+  position: absolute;
+  top: 330px;
+}
+
+.sirenhead>#title{
   position: absolute;
   bottom: 395px;
   left: 270px;
